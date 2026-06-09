@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Fitness Official</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      font-family: "Noto Sans KR", sans-serif;
+      background: linear-gradient(135deg, #EDE4D8 0%, #F5EFE6 30%, #E8DDD0 60%, #DDD0C0 100%);
+    }
+    .page {
+      width: 100%;
+      max-width: 480px;
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .deco1 {
+      position: fixed;
+      top: -100px;
+      right: -80px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,175,145,0.3) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .deco2 {
+      position: fixed;
+      bottom: -80px;
+      left: -80px;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(180,150,120,0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .deco3 {
+      position: fixed;
+      top: 40%;
+      left: -60px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(210,185,155,0.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 72px 28px 56px;
+    }
+    .profile-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .brand-name {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 38px;
+      font-weight: 300;
+      color: #2C1F10;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .divider-line {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .divider-line span {
+      width: 32px;
+      height: 1px;
+      background: #9A8168;
+      display: block;
+    }
+    .brand-tagline {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 11px;
+      font-weight: 400;
+      color: #7A6448;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-style: italic;
+    }
+    .sub-tagline {
+      font-size: 11px;
+      font-weight: 300;
+      color: #8A7055;
+      letter-spacing: 1.5px;
+      text-align: center;
+      line-height: 1.8;
+      margin-top: 12px;
+    }
+    .divider {
+      width: 1px;
+      height: 36px;
+      background: linear-gradient(180deg, transparent, #B09070, transparent);
+      margin: 32px 0;
+    }
+    .links-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .link-btn {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 20px 26px;
+      background: rgba(255,252,248,0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(175,150,120,0.28);
+      border-radius: 3px;
+      text-decoration: none;
+      color: #2C1F10;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .link-btn:hover {
+      background: rgba(255,252,248,0.92);
+      border-color: rgba(145,115,85,0.45);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(80,55,30,0.10);
+    }
+    .link-btn:active { transform: translateY(0); }
+    .btn-text { flex: 1; }
+    .btn-title {
+      font-size: 12px;
+      font-weight: 400;
+      color: #2C1F10;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    .btn-subtitle {
+      font-size: 11px;
+      font-weight: 300;
+      color: #9A8168;
+      letter-spacing: 0.3px;
+    }
+    .btn-arrow {
+      color: #B09070;
+      font-size: 20px;
+      font-weight: 300;
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+    .footer {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .footer-name {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 13px;
+      font-weight: 300;
+      color: #9A8168;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .footer-sub {
+      font-size: 10px;
+      color: #B5A090;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <div class="deco1"></div>
+  <div class="deco2"></div>
+  <div class="deco3"></div>
+  <div class="page">
+    <div class="content">
+      <div class="profile-section">
+        <h1 class="brand-name">Daily Fitness</h1>
+        <div class="divider-line">
+          <span></span>
+          <p class="brand-tagline">Everyday, Better Than Yesterday</p>
+          <span></span>
+        </div>
+        <p class="sub-tagline">체형 교정 · 통증 케어 · 다이어트 · 퍼스널 트레이닝</p>
+      </div>
+      <div class="divider"></div>
+      <div class="links-section">
+        <a href="http://pf.kakao.com/_GNQsX/chat" class="link-btn">
+          <div class="btn-text">
+            <div class="btn-title">카카오톡 채팅 상담</div>
+            <div class="btn-subtitle">익명으로 편하게 문의하세요</div>
+          </div>
+          <span class="btn-arrow">›</span>
+        </a>
+        <a href="https://m.blog.naver.com/dailyfitness_1st" class="link-btn">
+          <div class="btn-text">
+            <div class="btn-title">네이버 블로그</div>
+            <div class="btn-subtitle">운동 정보 & 회원 후기</div>
+          </div>
+          <span class="btn-arrow">›</span>
+        </a>
+        <a href="https://naver.me/xC6tkBBb" class="link-btn">
+          <div class="btn-text">
+            <div class="btn-title">센터 위치 & 지도 안내</div>
+          </div>
+          <span class="btn-arrow">›</span>
+        </a>
+      </div>
+      <div class="footer">
+        <p class="footer-name">Daily Fitness Official</p>
+        <p class="footer-sub">@dailyfitness_official</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
